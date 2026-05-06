@@ -1,0 +1,4 @@
+.scrollup { position:fixed; right:2rem; bottom:-6rem; width:46px; height:46px; display:flex; align-items:center; justify-content:center; background:var(--accent); color:var(--container-color); border-radius:var(--radius-sm); font-size:1.3rem; z-index:var(--z-tooltip); transition:bottom var(--t-spring),transform var(--t-spring),box-shadow var(--t-med); box-shadow:0 4px 20px rgba(var(--accent-rgb),.4); }
+.scrollup:hover { transform:translateY(-4px); box-shadow:0 12px 36px rgba(var(--accent-rgb),.55); }
+.show-scroll { bottom:5rem; }
+@media screen and (max-width:768px) { .show-scroll { bottom:5.5rem; } }

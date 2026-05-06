@@ -1,0 +1,130 @@
+/* ─── ABOUT ──────────────────────────────────────────────── */
+.about__container {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 4rem;
+}
+
+/* ─── SPHERE WRAP (remplace l'image) ─────────────────────── */
+.about__sphere-wrap {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── INFO BOXES ─────────────────────────────────────────── */
+.about__info {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.875rem;
+  margin-bottom: var(--mb-2);
+}
+.about__box {
+  background: var(--container-color);
+  border: 1.5px solid var(--card-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+  padding: 1.5rem 0.75rem;
+  transition:
+    transform var(--t-spring),
+    box-shadow var(--t-med),
+    border-color var(--t-fast);
+  cursor: default;
+}
+.about__box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+.about__icon {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  display: block;
+  transition: transform var(--t-spring);
+}
+.about__box:hover .about__icon {
+  transform: scale(1.2) rotate(-5deg);
+}
+.about__title {
+  font-family: var(--heading-font);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+.about__subtitle {
+  font-size: var(--tiny-font-size);
+  color: var(--text-color);
+}
+
+/* ─── TEXT ───────────────────────────────────────────────── */
+.about__description {
+  margin-bottom: var(--mb-1-5);
+  line-height: 1.85;
+  color: var(--text-color);
+}
+.about__description strong {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.about__availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--title-color);
+  border: 1px solid rgba(var(--accent-rgb), 0.25);
+  border-radius: var(--radius-full);
+  padding: 0.5rem 1.25rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-2);
+}
+.about__availability i {
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+/* ─── BREAKPOINTS ────────────────────────────────────────── */
+@media screen and (max-width: 992px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+  .about__sphere-wrap {
+    max-width: 420px;
+    margin-inline: auto;
+  }
+  .about__data {
+    text-align: center;
+  }
+  .about__info {
+    justify-content: center;
+  }
+  .about__description {
+    padding: 0 1rem;
+  }
+  .about__availability {
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .about__info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about__description {
+    padding: 0;
+  }
+  .about__sphere-wrap {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .about__info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,254 @@
+/* ══════════════════════════════════════════════════════════
+   HEADER — desktop shows full nav, mobile shows only toggle
+   Z-index: header=100, menu-sheet=110, modals=500
+   ══════════════════════════════════════════════════════════ */
+
+/* ─── HEADER BAR ─────────────────────────────────────────── */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: var(--z-fixed); /* 100 */
+  transition: background var(--t-med), box-shadow var(--t-med);
+}
+
+.scroll-header {
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 1px 0 var(--card-border), var(--shadow-sm);
+}
+
+.nav {
+  height: calc(var(--header-height) + 1.5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ─── LOGO ───────────────────────────────────────────────── */
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--heading-font);
+  font-weight: var(--font-extra-bold);
+  font-size: 1.1rem;
+  color: var(--title-color);
+  letter-spacing: -0.02em;
+}
+.nav__logo-img {
+  width: 34px; height: 34px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.nav__logo-dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateY(4px);
+}
+
+/* ─── DESKTOP NAV LIST ───────────────────────────────────── */
+.nav__list {
+  display: flex;
+  column-gap: 0.25rem;
+  list-style: none;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+  border-radius: var(--radius-full);
+  transition: color var(--t-fast);
+  white-space: nowrap;
+}
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 4px; left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 14px; height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: transform var(--t-spring);
+}
+.nav__link:hover,
+.nav__link.active-link { color: var(--title-color); }
+.nav__link:hover::after,
+.nav__link.active-link::after { transform: translateX(-50%) scaleX(1); }
+.nav__link.active-link { font-weight: var(--font-semi-bold); }
+
+/* Hide mobile-only elements on desktop */
+.nav__icon,
+.nav__close,
+.nav__toggle,
+.nav__overlay { display: none; }
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE  ≤ 768px
+   ══════════════════════════════════════════════════════════ */
+@media screen and (max-width: 768px) {
+
+  /* Header moves to bottom on mobile */
+  .header {
+    top: initial;
+    bottom: 0;
+    background: var(--nav-bg);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-top: 1px solid var(--card-border);
+    /* Important: no backdrop-filter stacking context for children */
+  }
+  .scroll-header { box-shadow: none; }
+  .nav { height: var(--header-height); }
+
+  /* ── Dark overlay behind menu sheet ── */
+  .nav__overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    /* Below the menu sheet but above everything else */
+    z-index: 10;
+  }
+
+  /* ── Menu SHEET — slides up from bottom ── */
+  .nav__menu {
+    position: fixed;
+    bottom: calc(var(--header-height) - 2px);
+    left: 0;
+    width: 100%;
+    background: var(--container-color);
+    border-radius: 1.5rem 1.5rem 0 0;
+    border-top: 1px solid var(--card-border);
+    padding: 3.5rem 1.25rem 1.5rem;
+    box-shadow: 0 -8px 40px rgba(0,0,0,0.2);
+    /* Above header (100), overlay (109) */
+    z-index: var(--z-navmenu); /* 110 */
+    /* Off-screen by default */
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+      opacity   0.3s ease;
+  }
+
+  /* Open state */
+  .nav__menu.show-menu {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ── Grid: 4 columns ── */
+  .nav__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  .nav__item { display: flex; }
+
+  .nav__link {
+    background: transparent !important;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 0.7rem 0.25rem;
+    border-radius: var(--radius-md);
+    font-size: 0.62rem;
+    text-align: center;
+    color: var(--text-color);
+    line-height: 1.2;
+    transition: background var(--t-fast), color var(--t-fast);
+  }
+  .nav__link::after { display: none; }
+  .nav__link:hover {
+    background: rgba(var(--accent-rgb), 0.1);
+    color: var(--accent);
+  }
+  .nav__link.active-link {
+    background: var(--accent);
+    color: var(--container-color);
+    font-weight: var(--font-semi-bold);
+  }
+
+  .nav__icon {
+    display: block;
+    font-size: 1.3rem;
+  }
+
+  /* ── Close button — top-right of the sheet ── */
+  .nav__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1rem; right: 1.25rem;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--body-color);
+    border: 1.5px solid var(--card-border);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background var(--t-fast), color var(--t-fast), transform var(--t-spring);
+    /* Must be above the sheet itself */
+    position: absolute;
+    z-index: 2;
+  }
+  .nav__close:hover {
+    background: var(--accent);
+    color: var(--container-color);
+    border-color: var(--accent);
+    transform: rotate(90deg);
+  }
+
+  /* ── Hamburger — the ONLY thing visible in the header bar ── */
+  .nav__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px; height: 42px;
+    font-size: 1.25rem;
+    color: var(--title-color);
+    background: var(--container-color);
+    border: 1.5px solid var(--card-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background var(--t-fast), color var(--t-fast), border-color var(--t-fast);
+    /* Above the fixed header */
+    position: relative;
+    z-index: calc(var(--z-fixed) + 1);
+  }
+  .nav__toggle:hover {
+    background: var(--accent);
+    color: var(--container-color);
+    border-color: var(--accent);
+  }
+}
+
+/* ── Smaller phones ── */
+@media screen and (max-width: 480px) {
+  .nav__list { grid-template-columns: repeat(4, 1fr); gap: 0.35rem; }
+  .nav__menu { padding: 3rem 0.875rem 1.25rem; }
+  .nav__link { font-size: 0.58rem; padding: 0.6rem 0.2rem; }
+  .nav__icon { font-size: 1.15rem; }
+}
+
+@media screen and (max-width: 350px) {
+  .nav__list { gap: 0.2rem; }
+}

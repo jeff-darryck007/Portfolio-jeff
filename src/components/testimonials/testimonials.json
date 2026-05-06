@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Arthur Fotso",
+    "description": "Ce portfolio réflète un vrai sens du design et une solide maîtrise technique. Les projets sont biens présentés, modernes, et surtout très professionnels. Bravo !"
+  },
+  {
+    "id": 2,
+    "title": "Rostile Tchouala",
+    "description": "J'ai été impréssioné par la qualité du travail. Chaque détail est soigné, et l'interface est à la fois élégante et fonctionnelle. On voit clairement la passion derrière chaque projet."
+  },
+  {
+    "id": 3,
+    "title": "Tatiana Manyda",
+    "description": "Je suis tombé sur ce site par hasard et j'ai tout de suite accroché. C'est clair, rapide, intuitif.... Franchement, c'est du très bon boulot. Continue comme ça !"
+  },
+  {
+    "id": 4,
+    "title": "Samuel Mbarga",
+    "description": "Un portfolio qui sort du lot ! Les animations sont fluides, le design est moderne, et la navigation est un vrai plaisir. On sent que chaque projet a été pensé avec soin."
+  },
+  {
+    "id": 5,
+    "title": "Linda Ngono",
+    "description": "Ce portfolio est une véritable vitrine de talent. Les projets sont variés et montrent une grande polyvalence. C'est inspirant de voir un tel niveau de professionnalisme."
+  },
+  {
+    "id": 6,
+    "title": "Kevin Tchoumbou",
+    "description": "J'ai adoré parcourir ce portfolio. Chaque projet est présenté de manière claire et engageante. On sent vraiment la passion et l'engagement derrière chaque réalisation."
+  },  
+  {
+    "id": 7,
+    "title": "Aline Mvondo",
+    "description": "Un portfolio qui allie esthétique et fonctionnalité. Les projets sont bien mis en valeur, et l'expérience utilisateur est top. C'est un plaisir de naviguer sur ce site."
+  }
+]
