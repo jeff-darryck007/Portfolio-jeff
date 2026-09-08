@@ -22,6 +22,24 @@ const posts = [
       '**Règle d\'or :** Ne jamais copier-coller de l\'IA sans comprendre. L\'IA génère, toi tu valides, tu adaptes, tu testes. C\'est le contrat.',
     ],
   },
+  {
+    id: 2,
+    category: 'Astuce',
+    date: 'Septembre 2026',
+    readTime: '3 min',
+    title: 'Claude Design : prototyper une interface en quelques minutes',
+    excerpt: 'Comment j\'utilise Claude Design pour passer de l\'idée à une maquette exploitable très rapidement, sans quitter mon environnement de travail.',
+    tags: ['IA', 'Design', 'Productivité'],
+    icon: 'uil-palette',
+    color: '#D97757',
+    paragraphs: [
+      'Entre l\'idée d\'une interface et une première maquette présentable, il y a souvent des heures de mise en page. Claude Design réduit ce temps à quelques minutes.',
+      '**La facilité :** on décrit l\'écran en langage naturel — « une landing page pour une association caritative, avec hero, statistiques et sections causes » — et Claude génère un canevas multi-artboards directement éditable. Pas de fichier à configurer, pas de librairie à installer.',
+      '**L\'édition visuelle :** une fois la maquette générée, chaque élément se sélectionne au clic, se modifie dans un panneau de propriétés, avec édition de texte en ligne et undo/redo. On ajuste sans réécrire de prompt.',
+      '**L\'efficacité :** je m\'en sers pour dégrossir une piste avant de passer sur Figma, tester plusieurs directions d\'un même écran, ou produire un flow de plusieurs pages cohérentes d\'un coup. Le résultat s\'exporte en PNG / PDF et se partage via un lien.',
+      '**Ma façon de l\'utiliser :** Claude Design pour explorer et valider vite une direction, Figma pour le travail fin et la remise au client. Les deux se complètent — l\'un fait gagner du temps sur la réflexion, l\'autre sur la finition.',
+    ],
+  },
 ];
 
 const CATEGORIES = ['Tous', 'Projet', 'Technique', 'Algorithme', 'Parcours', 'Astuce'];

@@ -12,6 +12,7 @@
 .qualification__text-right { text-align:left; }
 .qualification__title { font-family:var(--heading-font); font-size:var(--normal-font-size); font-weight:var(--font-semi-bold); color:var(--title-color); margin-bottom:.2rem; }
 .qualification__subtitle { display:inline-block; font-size:var(--small-font-size); color:var(--text-color); margin-bottom:.4rem; }
+.qualification__desc { font-size:var(--smaller-font-size); color:var(--text-color); line-height:1.5; margin-bottom:.5rem; }
 .qualification__calendar { display:flex; align-items:center; gap:.3rem; font-size:var(--smaller-font-size); color:var(--accent); font-weight:var(--font-medium); margin-bottom:1.25rem; }
 .qualification__text-right .qualification__calendar { justify-content:flex-start; }
 .qualification__text-left  .qualification__calendar { justify-content:flex-end; }

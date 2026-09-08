@@ -32,6 +32,21 @@ const servicesData = [
       { icon: 'uil-search-alt',    text: 'Audit UX et amélioration d\'interfaces existantes.' },
     ],
   },
+  {
+    id: 3,
+    icon: 'uil-clipboard-notes',
+    color: '#10B981',
+    title: 'Méthode & Cahier des charges',
+    desc: 'Cadrage du projet, méthode claire et bonnes pratiques pour développer un site web ou une application mobile sereinement.',
+    modalDesc: 'Un projet réussi se joue avant la première ligne de code. Je vous accompagne dès le cadrage pour définir vos besoins, éviter les mauvaises surprises et garder le cap tout au long du développement.',
+    items: [
+      { icon: 'uil-file-check-alt', text: 'Rédaction du cahier des charges : objectifs, cibles, fonctionnalités, contraintes techniques et budget.' },
+      { icon: 'uil-sitemap',        text: 'Arborescence, parcours utilisateur et priorisation des fonctionnalités (MVP puis évolutions).' },
+      { icon: 'uil-process',        text: 'Méthode de travail par étapes : maquettes, validation, développement itératif, recettes et livraison.' },
+      { icon: 'uil-mobile-android', text: 'Choix technos adaptés au besoin : site vitrine, web app ou application mobile (APK), et pourquoi.' },
+      { icon: 'uil-shield-check',   text: 'Bonnes pratiques : versionnage Git, tests, sécurité, SEO, hébergement et maintenance.' },
+    ],
+  },
 ];
 
 /* ── Modal component ── */

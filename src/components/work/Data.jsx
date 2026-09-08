@@ -5,6 +5,7 @@ import renoBioPlus from '../../image/Reno.jpeg';
 import adidasRefonte from '../../image/adidas-refonte-preview.jpeg';
 import ecomnetPortfolio from '../../image/ecomnet-portfolio-preview.png.jpeg';
 import employeeMeetingApp from '../../image/employee-meeting-app-preview.png.jpeg';
+import treasuresOfHope from '../../image/treasures-of-hope-preview.jpeg';
 
 export const projectsData = [
   {
@@ -52,14 +53,21 @@ export const projectsData = [
     tech: ['Figma', 'UI Design', 'UX Design', 'Prototypage', 'Mobile Design', 'Design responsive'],
     link: 'https://www.figma.com/design/6Fq0XMkdJP5V5ZnLuBdugZ/App-reunion?node-id=0-1&m=dev&t=KQQ8kw74D36sp8yZ-1',
   },
+  {
+    id: 6,
+    image: treasuresOfHope,
+    title: 'Treasures of Hope — Charity Website',
+    category: 'UI/UX Design — Maquette Web',
+    desc: "Projet réalisé dans le cadre de ma formation, consistant à concevoir la maquette d'un site web pour une organisation caritative appelée Treasures of Hope. Le site a pour objectif de présenter la mission de l'association et de mettre en avant ses différentes actions en faveur des personnes dans le besoin, notamment dans les domaines de la santé, de l'accès à l'eau, de l'aide sociale et du développement de communautés. La page d'accueil présente une section d'introduction avec un message de sensibilisation, la mission de Treasures of Hope, ses principales actions (Medicine Help, We Build and Create, Water Delivery, We Care About), des statistiques sur les personnes aidées, les dons collectés et les projets réalisés, une section présentant les causes et projets soutenus, ainsi que des boutons pour découvrir les causes, devenir volontaire, contacter l'organisation ou faire un don, avec une navigation Home / About Us / Causes / Volunteer / Contact et un choix de langue. L'objectif était de créer une interface humaine, rassurante et moderne, en utilisant une identité visuelle associant le bleu foncé et le vert clair. Type de projet : projet scolaire — maquette et conception UI/UX.",
+    tech: ['Figma', 'UI Design', 'UX Design', 'Prototypage', 'Web Design', 'Responsive Design', "Architecture d'une page web"],
+    link: 'https://www.figma.com/design/fpSfd5HAKnUGEOqlCve66Y/Treasures-of-hope?node-id=0-1&m=dev&t=AiFCrwri6vfs45vz-1',
+  },
 ];
 
 export const projectsNav = [
   { name: 'Tous' },
   { name: 'Web' },
   { name: 'App' },
-  { name: 'Bot' },
-  { name: 'Game' },
   { name: 'UI/UX Design — Maquette Web' },
   { name: 'App — UI/UX Design' },
 ];

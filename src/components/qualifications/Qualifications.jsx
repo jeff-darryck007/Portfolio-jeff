@@ -11,6 +11,20 @@ const education = [
 const experience = [
   { title: 'Formation sur les outils de design et developpement d\'applications', sub: 'Sm@rtDiso',                  dates: '2023 – 2024', side: 'right' },
   { title: 'Stage - Développement d\'applications',       sub: 'Univers Binaire - Cameroun',             dates: '3 mois', side: 'left' },
+  {
+    title: 'Projets web (Weimar Institut, RenoBioPlus)',
+    sub: 'Sites en production',
+    dates: '2024 – 2026',
+    side: 'right',
+    desc: 'Conception et développement de sites complets, du front (HTML/CSS/JS) au back (PHP, Symfony) jusqu\'à la mise en ligne. M\'a apporté de la rigueur, de l\'autonomie sur tout le cycle et le sens des besoins client.',
+  },
+  {
+    title: 'Maquettes UI/UX sur Figma',
+    sub: 'Projets de formation (Adidas, eComNet, Treasures of Hope, App réunions)',
+    dates: '2024 – 2026',
+    side: 'left',
+    desc: 'Création de maquettes et prototypes web et mobile sous Figma. M\'a développé le souci du détail visuel, la logique de parcours utilisateur, la hiérarchie de l\'information et la capacité à présenter une idée clairement.',
+  },
 ];
 
 const TimelineItem = ({ item }) => {
@@ -21,6 +35,7 @@ const TimelineItem = ({ item }) => {
         {isLeft && <>
           <h3 className="qualification__title">{item.title}</h3>
           {item.sub && <span className="qualification__subtitle">{item.sub}</span>}
+          {item.desc && <p className="qualification__desc">{item.desc}</p>}
           <div className="qualification__calendar"><i className="uil uil-calendar-alt" /> {item.dates}</div>
         </>}
       </div>
@@ -32,6 +47,7 @@ const TimelineItem = ({ item }) => {
         {!isLeft && <>
           <h3 className="qualification__title">{item.title}</h3>
           {item.sub && <span className="qualification__subtitle">{item.sub}</span>}
+          {item.desc && <p className="qualification__desc">{item.desc}</p>}
           <div className="qualification__calendar"><i className="uil uil-calendar-alt" /> {item.dates}</div>
         </>}
       </div>
