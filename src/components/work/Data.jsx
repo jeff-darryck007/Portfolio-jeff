@@ -3,6 +3,8 @@
 import weimarInstitut from '../../image/weimar.jpeg';
 import renoBioPlus from '../../image/Reno.jpeg';
 import adidasRefonte from '../../image/adidas-refonte-preview.jpeg';
+import ecomnetPortfolio from '../../image/ecomnet-portfolio-preview.png.jpeg';
+import employeeMeetingApp from '../../image/employee-meeting-app-preview.png.jpeg';
 
 export const projectsData = [
   {
@@ -32,6 +34,24 @@ export const projectsData = [
     tech: ['Figma', 'UI Design', 'UX Design', 'Wireframing', 'Prototypage', 'Design responsive'],
     link: 'https://www.figma.com/design/L0vbylam7D2we0O7l7UiAB/Refonte-adidas-website?node-id=93-79&t=8TcCIRtXsgmMTCFP-1',
   },
+  {
+    id: 4,
+    image: ecomnetPortfolio,
+    title: "eComNet — Portfolio d'un e-commerçant",
+    category: 'UI/UX Design — Maquette Web',
+    desc: "Projet réalisé dans le cadre de ma formation, consistant à concevoir la maquette d'un portfolio professionnel pour un e-commerçant. L'objectif était de créer une interface moderne, minimaliste et professionnelle permettant de présenter son activité, son expérience et ses réalisations. La page d'accueil met en avant les informations essentielles du profil, les coordonnées, les statistiques d'expérience ainsi qu'un accès aux différents projets réalisés. Une attention particulière a été portée à la hiérarchie visuelle, à la navigation et à la mise en valeur des informations importantes. Type de projet : projet scolaire — maquette / conception UI/UX.",
+    tech: ['Figma', 'UI Design', 'UX Design', 'Prototypage', 'Design responsive', "Conception d'interface"],
+    link: 'https://www.figma.com/design/20M6MHTu0LEVB6um4bgIra/Untitled?m=dev&t=l5lR5BFeR7AYAsGe-1',
+  },
+  {
+    id: 5,
+    image: employeeMeetingApp,
+    title: 'Employee & Meeting Management App',
+    category: 'App — UI/UX Design',
+    desc: "Projet réalisé dans le cadre de ma formation, consistant à concevoir une application mobile de gestion des employés et des réunions. L'application a pour objectif de faciliter la gestion des collaborateurs et l'organisation des réunions au sein d'une entreprise. Elle permet notamment de centraliser les informations liées aux employés, de gérer les réunions et de faciliter leur organisation. J'ai conçu l'interface en mettant l'accent sur une expérience utilisateur simple et intuitive, avec une navigation adaptée aux usages mobiles et une identité visuelle moderne. Type de projet : projet scolaire — conception d'une application mobile.",
+    tech: ['Figma', 'UI Design', 'UX Design', 'Prototypage', 'Mobile Design', 'Design responsive'],
+    link: 'https://www.figma.com/design/6Fq0XMkdJP5V5ZnLuBdugZ/App-reunion?node-id=0-1&m=dev&t=KQQ8kw74D36sp8yZ-1',
+  },
 ];
 
 export const projectsNav = [
@@ -41,4 +61,5 @@ export const projectsNav = [
   { name: 'Bot' },
   { name: 'Game' },
   { name: 'UI/UX Design — Maquette Web' },
+  { name: 'App — UI/UX Design' },
 ];
